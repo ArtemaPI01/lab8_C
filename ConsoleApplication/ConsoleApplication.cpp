@@ -28,7 +28,9 @@ int main()
 		Ashan[i].print();
 		cloakShop(Ashan[i]);
 	}
+	Ashan->CountOfShop();
 	delete[] Ashan;
+	Ashan->CountOfShop();
 	Alisher = new Owner;
 	Alisher->enter();
 	Alisher->print();

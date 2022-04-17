@@ -4,12 +4,31 @@
 #include <stdio.h>
 #include "Shop.h"
 #include <string>
-
+int Shop::counter = 0;
 void Shop::init(std::string name, std::string type, std::string street, std::string cloak) {
 	this->name = name;
 	this->type = type;
 	this->street = street;
 	this->cloak = cloak;
+}
+
+
+Shop::Shop() :c(counter) {
+	c = ++counter;
+}
+
+Shop::~Shop(){
+	counter--;
+}
+
+void Shop::CountOfShop()
+{
+	std::cout << "Кол-во магазинов: " << counter << "\n";
+}
+
+int Shop::getSize() const
+{
+	return c;
 }
 
 void Shop::enter() {
